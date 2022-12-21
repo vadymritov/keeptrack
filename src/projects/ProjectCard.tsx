@@ -2,17 +2,18 @@ import { Project } from "./Project";
 
 interface Props {
   project: Project;
+  onEdit: (project: Project) => void;
 }
 
 function formatDescription(desc: string): string {
-  return desc.substring(0, 60) + "...";
+  return desc.substring(0, 90) + "...";
 }
 
 function ProjectCard(props: Props) {
-  const { project } = props;
+  const { project, onEdit } = props;
 
   const handleEditClick = (projectBeingEdited: Project) => {
-    console.log(projectBeingEdited);
+    onEdit(projectBeingEdited);
   };
 
   return (
