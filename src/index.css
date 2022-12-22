@@ -17,3 +17,9 @@ code {
 form {
   min-width: 300px;
 }
+
+.center-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
