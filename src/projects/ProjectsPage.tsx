@@ -36,7 +36,7 @@ function ProjectsPage() {
       try {
         const data = await projectAPI.get(currentPage);
         setError(undefined);
-        setProjects([...projects, ...data]);
+        setProjects((p) => [...p, ...data]);
       } catch (error) {
         if (error instanceof Error) setError(error.message);
       } finally {

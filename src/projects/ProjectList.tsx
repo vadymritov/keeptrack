@@ -20,8 +20,8 @@ function ProjectList(props: Props) {
     setProjectBeingEdited({});
   };
 
-  const items = projects.map((project) => (
-    <div key={project.id} className="cols-sm">
+  const items = projects.map((project, index) => (
+    <div key={index} className="cols-sm">
       {project === projectBeingEdited ? (
         <ProjectForm onCancel={cancelEdit} onSave={onSave} project={project} />
       ) : (
